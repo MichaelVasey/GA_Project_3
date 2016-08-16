@@ -1,0 +1,2393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+	<script src="https://use.fontawesome.com/2ae980122e.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+	<style>
+		*,
+		*::before,
+		*::after {
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+
+		.clearfix::before,
+		.clearfix::after {
+			content: '';
+			display: table;
+		}
+
+		.clearfix::after {
+			clear: both;
+		}
+
+		body {
+			font-family: "Avenir Next", Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
+			color: #fff;
+			background: #252323;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			overflow-y: scroll;
+			overflow-x: hidden;
+			width: 100vw;
+		}
+
+		.content {
+			height: 3000px;
+			padding: 120px 50px 50px;
+			margin: 0 auto;
+			max-width: 1260px;
+		}
+
+		.grid {
+			list-style: none;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			padding: 0;
+		}
+
+		.grid-item {
+			position: relative;
+			width: 300px;
+			height: 300px;
+			min-width: 300px;
+			float: left;
+			background: #fff;
+			margin: 15px;
+			overflow: hidden;
+		}
+
+		.grid-item img {
+			-webkit-transform: translate3d(0, 0, 0);
+			-ms-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+			transition: opacity 0.8s, transform 0.8s;
+			-webkit-clip-path: url(#svgTextPath2);
+			clip-path: url(#svgTextPath2);
+		}
+
+		.grid-item .img1 {
+			-webkit-clip-path: url(#svgClipPath1);
+			clip-path: url(#svgClipPath1);
+		}
+		.grid-item .img2 {
+			-webkit-clip-path: url(#svgClipPath2);
+			clip-path: url(#svgClipPath2);
+		}
+		.grid-item .img3 {
+			-webkit-clip-path: url(#svgClipPath3);
+			clip-path: url(#svgClipPath3);
+		}
+		.grid-item .img4 {
+			-webkit-clip-path: url(#svgClipPath4);
+			clip-path: url(#svgClipPath4);
+		}
+		.grid-item .img5 {
+			-webkit-clip-path: url(#svgClipPath5);
+			clip-path: url(#svgClipPath5);
+		}
+		.grid-item .img6 {
+			-webkit-clip-path: url(#svgClipPath6);
+			clip-path: url(#svgClipPath6);
+		}
+		.grid-item .img7 {
+			-webkit-clip-path: url(#svgClipPath7);
+			clip-path: url(#svgClipPath7);
+		}
+		.grid-item .img8 {
+			-webkit-clip-path: url(#svgClipPath8);
+			clip-path: url(#svgClipPath8);
+		}
+		.grid-item .img9 {
+			-webkit-clip-path: url(#svgClipPath9);
+			clip-path: url(#svgClipPath9);
+		}
+		.grid-item .img10 {
+			-webkit-clip-path: url(#svgClipPath10);
+			clip-path: url(#svgClipPath10);
+		}
+		.grid-item .img11 {
+			-webkit-clip-path: url(#svgClipPath11);
+			clip-path: url(#svgClipPath11);
+		}
+		.grid-item .img12 {
+			-webkit-clip-path: url(#svgClipPath12);
+			clip-path: url(#svgClipPath12);
+		}
+		.grid-item .img12 {
+			-webkit-clip-path: url(#svgClipPath12);
+			clip-path: url(#svgClipPath12);
+		}
+		.grid-item .img13 {
+			-webkit-clip-path: url(#svgClipPath13);
+			clip-path: url(#svgClipPath13);
+		}
+		.grid-item .img14 {
+			-webkit-clip-path: url(#svgClipPath14);
+			clip-path: url(#svgClipPath14);
+		}
+		.grid-item .img15 {
+			-webkit-clip-path: url(#svgClipPath15);
+			clip-path: url(#svgClipPath15);
+		}
+		.grid-item .img16 {
+			-webkit-clip-path: url(#svgClipPath16);
+			clip-path: url(#svgClipPath16);
+		}
+		.grid-item .img17 {
+			-webkit-clip-path: url(#svgClipPath17);
+			clip-path: url(#svgClipPath17);
+		}
+		.grid-item .img18 {
+			-webkit-clip-path: url(#svgClipPath18);
+			clip-path: url(#svgClipPath18);
+		}
+		.grid-item .img19 {
+			-webkit-clip-path: url(#svgClipPath19);
+			clip-path: url(#svgClipPath19);
+		}
+		.grid-item .img20 {
+			-webkit-clip-path: url(#svgClipPath20);
+			clip-path: url(#svgClipPath20);
+		}
+		.grid-item .img21 {
+			-webkit-clip-path: url(#svgClipPath21);
+			clip-path: url(#svgClipPath21);
+		}
+		.grid-item .img22 {
+			-webkit-clip-path: url(#svgClipPath22);
+			clip-path: url(#svgClipPath22);
+		}
+		.grid-item .img23 {
+			-webkit-clip-path: url(#svgClipPath23);
+			clip-path: url(#svgClipPath23);
+		}
+		.grid-item .img24 {
+			-webkit-clip-path: url(#svgClipPath24);
+			clip-path: url(#svgClipPath24);
+		}
+		.grid-item .img25 {
+			-webkit-clip-path: url(#svgClipPath25);
+			clip-path: url(#svgClipPath25);
+		}
+		.grid-item .img26 {
+			-webkit-clip-path: url(#svgClipPath26);
+			clip-path: url(#svgClipPath26);
+		}
+		.grid-item .img27 {
+			-webkit-clip-path: url(#svgClipPath27);
+			clip-path: url(#svgClipPath27);
+		}
+		.grid-item .img28 {
+			-webkit-clip-path: url(#svgClipPath28);
+			clip-path: url(#svgClipPath28);
+		}
+		.grid-item .img29 {
+			-webkit-clip-path: url(#svgClipPath29);
+			clip-path: url(#svgClipPath29);
+		}
+
+/*		.grid-item:hover img {
+			transform: translate3d(0, 0, 0);
+		}*/
+
+		.grid-item header {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 45px;
+			width: 100%;
+			padding: 5px 10px;
+			color: #252323;
+			opacity: 0.8;
+			font-size: 24px;
+			z-index: 101;
+		}
+
+		.grid-item footer {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 45px;
+			width: 100%;
+			padding: 5px 10px;
+			color: #252323;
+			opacity: 0.8;
+			font-size: 24px;
+			z-index: 101;
+			transition: color 0.8s;
+		}
+
+		.grid-item footer span {
+			display: inline-block;
+			height: 40px;
+			line-height: 40px;
+			float: right;
+		}
+
+		.grid-item footer span span {
+			margin-left: 10px;
+		}
+
+		.grid-item footer .tick-box {
+			float: left;
+			height: 35px;
+			width: 35px;
+		}
+
+		.circle {
+    		opacity: 0;
+    		stroke-dasharray: 130 130;
+    		stroke-dashoffset: 130;
+/*    		-webkit-transition: all 1.2s;
+    		-moz-transition: all 1.2s;
+    		-ms-transition: all 1.2s;
+    		-o-transition: all 1.2s;*/
+    		transition: all 1.2s;
+		}
+
+		.tick {
+   		 	stroke-dasharray: 50 50;
+		    stroke-dashoffset: 50;
+/*		    -webkit-transition: stroke-dashoffset 1.2s 0.5s ease-out;
+		    -moz-transition: stroke-dashoffset 1.2s 0.5s ease-out;
+		    -ms-transition: stroke-dashoffset 1.2s 0.5s ease-out;
+		    -o-transition: stroke-dashoffset 1.2s 0.5s ease-out;*/
+		    transition: stroke-dashoffset 1.2s 0.5s ease-out;
+		}
+
+		.ticked svg .path{
+    		opacity: 1;
+    		stroke-dashoffset: 0;
+		}
+
+		.eur {
+			display: inline-block;
+			position: absolute;
+			height: 40px;
+			font-size: 28px;
+			color: #252323;
+			line-height: 40px;
+			text-align: center;
+			opacity: 0.8;
+			transition: color 0.8s;
+		}
+
+		.eur i {
+			margin-right: 10px;
+		}
+
+		.plus-minus-btn {
+			position: absolute;
+			display: inline-block;
+			top: 15px;
+			right: 15px;
+			height: 20px;
+			width: 20px;
+			-webkit-transform-origin: 50% 50%;
+			-ms-transform-origin: 50% 50%;
+			transform-origin: 50% 50%;
+			transition: transform 0.6s;
+			cursor: pointer;
+		}
+
+		.plus-minus-btn::before,
+		.plus-minus-btn::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			width: 100%;
+			height: 2px;
+			background: #252323;
+			-webkit-transform-origin: 50% 50%;
+			-ms-transform-origin: 50% 50%;
+			transform-origin: 50% 50%;
+			opacity: 0.8;
+			-webkit-transform: rotate(90deg);
+			-ms-transform: rotate(90deg);
+			transform: rotate(90deg);
+			transition: background 0.8s;
+		}
+
+		.plus-minus-btn::after {
+			-webkit-transform: rotate(0deg);
+			-ms-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+
+		.plus-minus-btn:hover {
+			-webkit-transform: rotate(180deg);
+			-ms-transform: rotate(18deg);
+			transform: rotate(180deg);
+		}
+
+		.grid-item.animateIn .plus-minus-btn::before,
+		.grid-item.animateIn .plus-minus-btn::after {
+			background: #fff;
+		}
+
+		.grid-item a {
+			position: relative;
+			top: 0;
+			left: 0;
+			display: block;
+			height: 100%;
+			width: 100%;
+		}
+
+		.grid-item.animateIn .eur,
+		.grid-item.animateIn footer {
+			color: #fff;
+		}
+
+		.curtain {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 200%;
+			width: 200%;
+			-webkit-transform-origin: top left;
+			-ms-transform-origin: top left;
+			transform-origin: top left;
+			z-index: 100;
+			-webkit-transform: rotate3d(0, 0, 1, 90deg);
+			-ms-transform: rotate3d(0, 0, 1, 90deg);
+			transform: rotate3d(0, 0, 1, 90deg);
+			background: #252323;
+			transition: transform 0.8s ease;
+		}
+
+		.grid-item.animateIn .curtain {
+			-webkit-transform: rotate3d(0, 0, 1, 0deg);
+			-ms-transform: rotate3d(0, 0, 1, 0deg);
+			transform: rotate3d(0, 0, 1, 0deg);
+		}
+
+		.grid-item.animateOut .curtain {
+			-webkit-transform: rotate3d(0, 0, 1, -90deg);
+			-ms-transform: rotate3d(0, 0, 1, -90deg);
+			transform: rotate3d(0, 0, 1, -90deg);
+		}
+
+		.curtain div {
+			position: absolute;
+			top: 25%;
+			left: 0;
+			width: 50%;
+			height: 50%;
+			padding: 30px;
+			text-align: left;
+			-webkit-transform: translate3d(0, -25%, 0);
+			-ms-transform: translate3d(0, -25%, 0);
+			transform: translate3d(0, -25%, 0);
+		}
+
+		.curtain p {
+			display: inline-block;
+			margin: 0 0 0.25em;
+			padding: 0.4em 1em;
+			background: rgba(255, 255, 255, 0.9);
+			color: #2f3238;
+			text-transform: none;
+			font-weight: 500;
+			font-size: 15px;
+			opacity: 0;
+			-webkit-transform: translate3d(-360px, 0, 0);
+			-ms-transform: translate3d(-360px, 0, 0);
+			transform: translate3d(-360px, 0, 0);
+			transition: opacity 0.45s, transform 0.45s;
+		}
+
+		.curtain p:nth-child(1) {
+			transition-delay: 0.8s;
+		}
+
+		.curtain p:nth-child(2) {
+			transition-delay: 0.85s;
+		}
+
+		.curtain p:nth-child(3) {
+			transition-delay: 0.9s;
+		}
+
+		.grid-item.animateIn .curtain p {
+			opacity: 1;
+			-webkit-transform: translate3d(0, 0, 0);
+			-ms-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+		}
+
+		.plus-minus-btn.close {
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+
+		.plus-minus-btn.close:hover {
+			-webkit-transform: rotate(225deg);
+			-ms-transform: rotate(225deg);
+			transform: rotate(225deg);
+		}
+
+		#fixed-header {
+			position: fixed;
+			height: 100vh;
+			width: 100vw;
+			background: rgba(255, 255, 255, 1);
+			clip: rect(0vw, 100vw, 100vh, 0vh);
+			transition: all 0.8s;
+			z-index: 999;
+		}
+
+		body.open #fixed-header {
+			clip: rect(0px, 100px, 100px, 0px);
+			-webkit-transform: translate(15px, 15px);
+			-ms-transform: translate(15px, 15px);
+			transform: translate(15px, 15px);
+		}
+
+		body.open #shopping-cart {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+		}
+
+		.header-inner {
+			position: relative;
+			top: 50%;
+			left: 50%;
+			width: 450px;
+			height: 300px;
+			text-align: center;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
+
+		.header-content-box {
+			position: relative;
+			top: 50%;
+			color: rgba(37, 35, 35, 0.8);
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+		}
+
+		.header-content-box h1 {
+			margin: 0;
+			font-size: 64px;
+		}
+
+		@media screen and (max-width: 480px) {
+			.header-content-box h1 {
+				font-size: 48px;
+			}
+		}
+
+		.header-content-box button {
+			padding: 10px 20px;
+			font-size: 30px;
+			background: rgba(37, 35, 35, 0.8);
+			color: #fff;
+			border: none;
+			cursor: pointer;
+		}
+
+		@media screen and (max-width: 400px) {
+			.header-content-box button {
+				font-size: 24px;
+				padding: 8px 15px;
+			}
+		}
+
+		.header-content-box button:hover {
+			background: rgba(37, 35, 35, 0.6);
+		}
+
+		.header-content-box button:focus,
+		.header-content-box button:active {
+			outline: none;
+		}
+
+		.content-wrapper {
+			width: 100%;
+		}
+
+		#shopping-cart {
+			position: fixed;
+			top: 15px;
+			left: 15px;
+			overflow: hidden;
+			background: #fff;
+			font-family: 'Abel', sans-serif;
+			color: rgba(37, 35, 35, 0.8);
+			min-height: 300px;
+			width: 350px;
+			padding: 20px;
+			clip: rect(0px, 100px, 100px, 0px);
+			transition: clip 0.6s 0s, opacity 0.8s 0.5s;
+			visibility: hidden;
+			opacity: 0;
+			pointer-events: none;
+			z-index: 999;
+		}
+
+		#shopping-cart.open {
+			clip: rect(0px, 350px, 499px, 0px);
+		}
+
+		.shopping-cart .cart-inner {
+			position: relative;
+		}
+
+		.shopping-cart h3,
+		.shopping-cart h4 {
+			font-weight: 300;
+		}
+
+		.shopping-cart h3 {
+			background: rgba(37, 35, 35, 0.8);
+			color: #fff;
+			padding-left: 5px;
+		}
+
+		.shopping-cart .cart-header,
+		.shopping-cart .cart-footer {
+			position: relative;
+			left: 0;
+			height: 80px;
+			width: 100%;
+			padding: 15px;
+		}
+
+		.shopping-cart .cart-contents {
+			height: 200px;
+			overflow-y: scroll;
+			padding: 15px;
+		}
+
+		.shopping-cart .cart-header {
+			top: 0;
+		}
+
+		.shopping-cart .cart-header .cart-total {
+			display: inline-block;
+			float: right;
+			top: 20px;
+			right: 0;
+			margin-top: 5px;
+		}
+
+		.shopping-cart .cart-header::after,
+		.shopping-cart .cart-footer::before {
+			content: '';
+			position: absolute;
+			top: 101%;
+			left: 50%;
+			width: 90%;
+			height: 1px;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			background: rgba(37, 35, 35, 0.6);
+		}
+
+		.shopping-cart .cart-footer::before {
+			top: 0;
+		}
+
+		.shopping-cart .cart-footer {
+			height:	100%;
+			bottom: 0;
+		}
+
+		.cart-icon {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100px;
+			width: 100px;
+			text-align: center;
+			line-height: 100px;
+			font-size: 28px;
+			color: rgba(37, 35, 35, 0.6);
+			z-index: 999;
+			cursor: pointer;
+			transition: opacity 0.4s;
+		}
+
+		.cart-close {
+			display: none;
+			opacity: 0;
+			position: absolute;
+			top: 36px;
+			left: 36px;
+			height: 28px;
+			width: 28px;
+			z-index: 999;
+			cursor: pointer;
+			transition: opacity 0.4s;
+		}
+
+		.cart-close::before, 
+		.cart-close::after {
+			content: '';
+			position: absolute;
+			height: 2px;
+			width: 100%;
+			background: rgba(37, 35, 35, 0.6);
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%) rotate(45deg);
+			-ms-transform: translate(-50%, -50%) rotate(45deg);
+			transform: translate(-50%, -50%) rotate(45deg);
+			-webkit-transform-origin: 50% 50%;
+			-ms-transform-origin: 50% 50%;
+			transform-origin: 50% 50%;
+		}
+
+		.cart-close::after {
+			-webkit-transform: translate(-50%, -50%) rotate(-45deg);
+			-ms-transform: translate(-50%, -50%) rotate(-45deg);
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+
+		#shopping-cart.open .cart-close {
+			display: block;
+			opacity: 1;
+		}
+
+		#shopping-cart.open .cart-icon {
+			display: none;
+			opacity: 0;
+		}
+
+		span.col {
+			display: inline-block;
+		}
+
+		span.col.left {
+			width: 60%;
+		}
+
+		span.col.right {
+			width: 25%;
+			text-align: right;
+		}
+
+		span.col.mid {
+			width: 15%;
+			text-align: center;
+		}
+
+		.shopping-cart h4 {
+			margin-top: 10px;
+			line-height: 1.4em;
+		}
+
+		.cart-footer h4 span {
+			margin: 0 7px;
+		}
+
+		.cart-footer button {
+			display: block;
+			margin: 20px auto 10px;
+			padding: 10px;
+			background: rgba(37, 35, 35, 0.8);
+			color: #fff;
+			border: none;
+			font-weight: 700;
+			cursor: pointer;
+		}
+
+		.cart-footer button:hover {
+			background: rgba(37, 35, 35, 0.6);
+		}
+
+		.cart-contents span.item-qty:focus {
+			outline: 1px solid rgba(37, 35, 35, 0.6);
+		}
+
+		.cart-contents span.item-rem {
+			margin-left: 5px;
+			cursor: pointer;
+		}
+
+		/* scrolling item background */
+
+		.bg-scroll {
+			height: 100%;
+			width: 200%;
+			-webkit-transform: translate3d(-50%, 0, 0);
+			-ms-transform: translate3d(-50%, 0, 0);
+			transform: translate3d(-50%, 0, 0);
+			transition: transform 0.8s;
+		}
+
+		.grid-item:hover .bg-scroll {
+			-webkit-transform: translate3d(0, 0, 0);
+			-ms-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+		}
+
+		.item-content {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 50%;
+		}
+
+		.item-img {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			height: 100%;
+			width: 50%;
+		}
+
+		.item-content div {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
+
+		.item-content p {
+			display: inline-block;
+			margin: 0 0 0.25em;
+			padding: 0.4em 1em;
+			background: #252323;
+			color: #fff;
+			font-weight: 500;
+			font-size: 15px;
+			transition: opacity 0.45s, transform 0.45s;
+			-webkit-transform: translate3d(-240px, 0, 0);
+			-ms-transform: translate3d(-240px, 0, 0);
+			transform: translate3d(-240px, 0, 0);
+		}
+
+		.grid-item:hover .item-content p {
+			-webkit-transform: translate3d(0, 0, 0);
+			-ms-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+		}
+
+		.item-content p:nth-child(1) {
+			transition-delay: 0.8s;
+		}
+
+		.item-content p:nth-child(2) {
+			transition-delay: 0.85s;
+		}
+
+		.item-content p:nth-child(3) {
+			transition-delay: 0.9s;
+		}
+
+		.add-btn {
+			cursor: pointer;
+		}
+
+		.scroll-up-btn {
+			position: fixed;
+			bottom: 40px;
+			right: 40px;
+			height: 50px;
+			width: 50px;
+			font-size: 26px;
+			line-height: 26px;
+			color: rgba(37, 35, 35, 0.6);
+			background: #fff;
+			border: none;
+			cursor: pointer;
+			opacity: 0.8;
+			transition: opacity 0.5s;
+		}
+
+		.scroll-up-btn:hover {
+			opacity: 1;
+		}
+
+		.scroll-up-btn:focus,
+		.scroll-up-btn:active {
+			outline: none;
+		}
+
+		.hide {
+			opacity: 0;
+			display: none;
+		}
+
+		@media screen and (max-width: 500px) {
+			#shopping-cart {
+				top: 0;
+				left: 0;
+				background: rgba(255, 255, 255, 0.8); 
+			}
+			body.open #fixed-header {
+				clip: rect(0, 100vw, 100vh, 0);
+				-webkit-transform: translate(0, -100%);
+				-ms-transform: translate(0, -100%);
+				transform: translate(0, -100%);
+			}
+			.grid-item {
+				height: 260px;
+				width: 260px;
+				min-width: 260px;
+			}
+			.grid-item header {
+				height: 30px;
+			}
+			.eur {
+				font-size: 24px;
+			} 
+			.grid-item footer {
+				padding: 5px 10px 15px;
+			}
+			.grid-item footer span {
+				line-height: 30px;
+			}
+			.grid-item footer .tick-box {
+				height: 30px;
+				width: 30px;
+			}
+			.item-img svg text {
+/*				x: 75;*/
+/*				y: 120;*/
+				font-size: 120px;
+			}
+		}
+
+		@media screen and (max-width: 470px) {
+			.scroll-up-btn {
+				right: 10px;
+				bottom: 10px;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+
+		<div id='fixed-header'>
+			<div class="header-inner">
+				<div class="header-content-box">
+					<h1>
+						<span><i class='fa fa-bicycle'></i></span>VeloMatic
+					</h1>
+					<button id='expand-btn'>Cliquez</button>
+				</div>
+			</div>
+		</div>
+
+		<div id='shopping-cart' class='shopping-cart'>
+			<span class='cart-close'></span>
+			<span class='cart-icon'><i class='fa fa-shopping-bag'></i></span>
+
+			<div class='cart-inner'>
+				<div class='cart-header'>
+					<span class='cart-total'>Total: ¥<span>0.00</span></span>
+				</div>
+				<div id='cart-contents' class='cart-contents'>
+					<h3>Your Items</h3>
+					<h4><span class='col left'>Item</span><span class='col mid'>Qty</span><span class='col right'>Sub-total</span></h4>
+				</div>
+				<div class='cart-footer'>
+					<h3>Go to checkout</h3>
+					<h4>Pay with credit card<span><i class='fa fa-credit-card'></i></span>PayPal<span><i class='fa fa-cc-paypal'></i></span><br>cash<span>¥ € $ £</span>or coffee<span><i class='fa fa-coffee'></i></span></h4>
+					<button>Checkout!</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="content">
+			<ul class="grid">
+
+				<li class="grid-item" data-desc="efficient monorail" data-price="6.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">€</i><span> 6</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img1" src="http://i1378.photobucket.com/albums/ah88/mjv123/trainFour_zpsulgdwnxe.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath1">
+											<text x="80" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf238;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>an efficient</p>
+									<p>urban</p>
+									<p>monorail</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="hipster fixie" data-price="75.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">£</i><span> 75</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img2" src="http://i1378.photobucket.com/albums/ah88/mjv123/hipster_zps9lnvnnvr.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath2">
+											<text x="47" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf206;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>an impractical</p>
+									<p>hipster</p>
+									<p>fixie</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="experimental spaceplane" data-price="1250.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">$</i><span> 1250</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img22" src="http://i1378.photobucket.com/albums/ah88/mjv123/rocket_zpsjdxdkdzi.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath22">
+											<text x="80" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf135;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>an experimental</p>
+									<p>sub-orbital</p>
+									<p>spaceplane</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="shiny new subway train" data-price="4.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">$</i><span> 4</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img3" src="http://i1378.photobucket.com/albums/ah88/mjv123/trainThree_zpszrdl8aln.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath3">
+											<text x="80" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf239;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>a shiny</p>
+									<p>new subway</p>
+									<p>train</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="creaky fishing boat" data-price="25.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">Nkr</i><span> 25</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img5" src="http://i1378.photobucket.com/albums/ah88/mjv123/fishboat_zpsp87u3hvn.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath5">
+											<text x="60" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf21a;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>a creaky</p>
+									<p>fishing</p>
+									<p>boat</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="broken bicycle" data-price="13.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">€</i><span> 13</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img6" src="http://i1378.photobucket.com/albums/ah88/mjv123/bikeTwo_zpsfb5jbph3.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath6">
+											<text x="47" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf206;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>a desirable</p>
+									<p>broken</p>
+									<p>bicycle</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="hot air balloon" data-price="20.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">£</i><span> 20</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img7" src="http://i1378.photobucket.com/albums/ah88/mjv123/balloon_zpsmxzrjcna.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath7">
+											<text x="80" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf0ac;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>a breezy</p>
+									<p>hydrogen</p>
+									<p>balloon</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="NY taxi ride" data-price="15.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">$</i><span> 10</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img8" src="http://i1378.photobucket.com/albums/ah88/mjv123/nytaxi_zpsjijbh8sf.jpg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath8">
+											<text x="60" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf1ba;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>an NY</p>
+									<p>taxicab</p>
+									<p>ride at 2am</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="leaky rowing boat" data-price="8.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">HuF</i><span> 8</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img9" src="http://i1378.photobucket.com/albums/ah88/mjv123/boat_zpssmuui9q9.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath9">
+											<text x="80" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf14e;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>a charmingly</p>
+									<p>leaky</p>
+									<p>rowing boat</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="scenic cablecar" data-price="17.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">CHF</i><span> 17</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img10" src="http://i1378.photobucket.com/albums/ah88/mjv123/cablecar_zpsew9vomxp.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath10">
+											<text x="70" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf083;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>a scenic</p>
+									<p>mountain</p>
+									<p>cablecar</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="rusty campervan" data-price="50.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">PLN</i><span> 50</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img11" src="http://i1378.photobucket.com/albums/ah88/mjv123/camper_zpscoxyyviv.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath11">
+											<text x="80" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf207;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>a rusty</p>
+									<p>garden</p>
+									<p>campervan</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="adventurous kayak" data-price="300.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">$</i><span> 300</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img12" src="http://i1378.photobucket.com/albums/ah88/mjv123/canoe_zpsaktbk994.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath12">
+											<text x="80" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf14e;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>an</p>
+									<p>adventurous</p>
+									<p>kayak</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="remote air-taxi" data-price="100.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">Nkr</i><span> 100</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img24" src="http://i1378.photobucket.com/albums/ah88/mjv123/airplaneOne_zpsd94a9xtq.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath24">
+											<text x="80" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf072;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>a remote</p>
+									<p>and bumpy</p>
+									<p>air-taxi</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="beautiful porsche" data-price="1500.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">€</i><span> 1500</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img13" src="http://i1378.photobucket.com/albums/ah88/mjv123/carThree_zps33xlisr9.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath13">
+											<text x="60" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf1b9;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>a beautiful</p>
+									<p>vintage</p>
+									<p>porsche</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="tokyo skateboard" data-price="10000.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">¥</i><span> 10000</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img19" src="http://i1378.photobucket.com/albums/ah88/mjv123/skateboard_zpsvnzzwlnf.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath19">
+											<text x="92" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf1ae;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>a tokyo</p>
+									<p>skateboard</p>
+									<p>adventure</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="fading citröen" data-price="250.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">€</i><span> 250</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img14" src="http://i1378.photobucket.com/albums/ah88/mjv123/carOne_zpsjxppeh16.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath14">
+											<text x="60" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf1b9;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>a blue</p>
+									<p>fading</p>
+									<p>citröen</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="nauseous ferris" data-price="10.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">£</i><span> 10</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img15" src="http://i1378.photobucket.com/albums/ah88/mjv123/ferriswheel_zpssw3yezcr.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath15">
+											<text x="65" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf030;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>a nausea</p>
+									<p>inducing</p>
+									<p>ferris wheel</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="gelato gondola" data-price="50.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">€</i><span> 50</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img16" src="http://i1378.photobucket.com/albums/ah88/mjv123/gondola_zpsoitjq5fn.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath16">
+											<text x="70" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf083;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>a gondola</p>
+									<p>and an</p>
+									<p>icecream</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="husky sled" data-price="60.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">NKr</i><span> 60</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img17" src="http://i1378.photobucket.com/albums/ah88/mjv123/husky_zpshnugsgnb.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath17">
+											<text x="80" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf1b0;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>a scandi</p>
+									<p>husky dog</p>
+									<p>sled mush</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="vintage ice skates" data-price="8.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">€</i><span> 8</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img18" src="http://i1378.photobucket.com/albums/ah88/mjv123/skate_zpsdny4o397.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath18">
+											<text x="92" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf1ae;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>slidy</p>
+									<p>vintage</p>
+									<p>ice-skates</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="transatlantic plane trip" data-price="500.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">£</i><span> 500</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img25" src="http://i1378.photobucket.com/albums/ah88/mjv123/airplaneTwo_zpsecucqsfc.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath25">
+											<text x="80" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf072;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>a transatlantic</p>
+									<p>airplane</p>
+									<p>expedition</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="chilly swim" data-price="0.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">ISK</i><span> 0</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img20" src="http://i1378.photobucket.com/albums/ah88/mjv123/swim_zpstoifyx5z.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath20">
+											<text x="80" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf1bb;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>a chilly</p>
+									<p>swim in a</p>
+									<p>nordic lake</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="san fran tram" data-price="5.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">$</i><span> 5</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img21" src="http://i1378.photobucket.com/albums/ah88/mjv123/tram_zpshbwpacvt.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath21">
+											<text x="80" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf238;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>a san-francisco</p>
+									<p>tram</p>
+									<p>odyssey</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="floaty glider" data-price="50.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">£</i><span> 50</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img26" src="http://i1378.photobucket.com/albums/ah88/mjv123/glider_zpswqhchm2n.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath26">
+											<text x="70" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf1d8;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>how are we</p>
+									<p>still in</p>
+									<p>the air?!?</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="tunnelbana" data-price="8.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">€</i><span> 8</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img27" src="http://i1378.photobucket.com/albums/ah88/mjv123/subway_zpskvhst9cs.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath27">
+											<text x="80" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf238;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>a ticket for</p>
+									<p>the stockholm</p>
+									<p>tunnelbana</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="walk in the woods" data-price="0.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">$</i><span> 0</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img28" src="http://i1378.photobucket.com/albums/ah88/mjv123/walk_zpsbrnpjagu.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath28">
+											<text x="80" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf1bb;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>a thoughtful</p>
+									<p>walk in the </p>
+									<p>woods</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="jet-fighter" data-price="25000.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">$</i><span> 25000</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img23" src="http://i1378.photobucket.com/albums/ah88/mjv123/jet_zps1rcpu2rs.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath23">
+											<text x="80" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf0fb;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>a slippery</p>
+									<p>silver</p>
+									<p>jet-fighter</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="grid-item" data-desc="ski trip" data-price="800.00" data-qty="0">
+					<a>
+						<header>
+							<span class="eur">€</i><span> 800</span></span>
+							<span class="plus-minus-btn"></span>
+						</header>
+						<div class="bg-scroll">
+							<div class="item-img">
+								<img class="svg-img img29" src="http://i1378.photobucket.com/albums/ah88/mjv123/ski_zpsjdzpj8c0.jpeg" height="300px" width="300px">
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgClipPath29">
+											<text x="65" y="200" textLength="200px" lengthAdjust="spacing" font-family="FontAwesome" font-size="160px" font-weight="700" font-style="normal">&#xf03e;</text>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div class="item-content">
+								<div>
+									<p>an alpine</p>
+									<p>ski</p>
+									<p>jaunt</p>
+								</div>
+							</div>
+						</div>
+						<footer>
+							<span class="tick-box">
+								<svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 									viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+										<path class="circle path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
+										<polyline class="tick path" style="fill:none;stroke:#1aff1a;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+											11.6,20 15.9,24.2 26.4,13.8 "/>
+								</svg>
+							</span>
+							<span>Add to bag<span class="add-btn"><i class="fa fa-shopping-bag"></i></span></span>
+						</footer>
+						<div class="curtain">
+							<div>
+								<p>I have no money</p>
+								<p>No resources, no hopes.</p>
+								<p>I am the happiest man alive.</p>
+							</div>
+						</div>
+					</a>
+				</li>
+
+			</ul>
+
+		</div> <!-- content -->
+
+		<button class="scroll-up-btn"><span><i class="fa fa-hand-o-up"></i></span></button>
+
+	</div> <!-- wrapper -->
+
+
+
+	<script>
+
+		window.onbeforeunload = function(){
+			window.scrollTo(0, 0);
+		}
+
+		document.getElementsByClassName('scroll-up-btn')[0].addEventListener('click', function() {
+			window.scrollTo(0, 0);
+		});
+
+		Array.prototype.slice.call(document.getElementsByClassName('plus-minus-btn')).forEach(function(btn){
+			btn.addEventListener('click', animateIn);
+		});
+
+		function animateIn(e) {
+			var self = this;
+			e.preventDefault();
+			e.stopPropagation();
+			this.parentElement.parentElement.parentElement.classList.add('animateIn');
+			this.removeEventListener('click', animateIn);
+			this.addEventListener('click', animateOut);
+			this.classList.add('close');
+		}
+
+		function animateOut(e) {
+			var self = this;
+			e.preventDefault();
+			e.stopPropagation();
+			self.parentElement.parentElement.parentElement.classList.add('animateOut');
+			function reset(elem) {
+				elem.parentElement.parentElement.parentElement.classList = "grid-item";
+			}
+			this.parentElement.parentElement.parentElement.addEventListener('animationEnd', reset(this));
+			this.removeEventListener('click', animateOut);
+			this.addEventListener('click', animateIn);
+			this.classList.remove('close');
+		}
+
+		document.getElementsByClassName('cart-icon')[0].addEventListener('click', function(e) {
+			e.stopPropagation();
+			this.parentNode.classList.add('open');
+		});
+
+		document.getElementsByClassName('cart-close')[0].addEventListener('click', function(e) {
+			e.stopPropagation();
+			this.parentNode.classList.remove('open');
+		});
+
+		document.getElementById('expand-btn').addEventListener('click', function() {
+			document.getElementsByTagName('body')[0].classList.add('open');
+		});
+
+		function addItem(e) {
+
+			var item = e.target.parentElement.parentElement.parentElement.parentElement.parentElement;
+			var tick = e.target.parentElement.parentElement.previousElementSibling;
+			if (!tick.classList.contains('ticked')) {
+				tick.classList.add('ticked');
+			}
+
+			var qty = parseInt(item.getAttribute('data-qty'));
+			var prc = parseFloat(item.getAttribute('data-price'));
+			if(qty === 0) {
+				var newItem = createItem(item);
+				var itemList = document.getElementById('cart-contents');
+
+				itemList.appendChild(newItem);
+
+			} 
+			else {
+				var cart = document.getElementById('cart-contents');
+				var items = Array.prototype.slice.call(cart.querySelectorAll('p'));
+				for (i = 0; i < items.length; i++) {
+					var itm = items[i];
+					var itmDesc = itm.querySelector('.item-desc').textContent;
+					if (itmDesc == item.getAttribute('data-desc')) {
+						var itmQty = parseInt(itm.querySelector('.item-qty').textContent);
+						var itmTot = parseFloat((itm.querySelector('.item-total').textContent).substr(1));
+						++itmQty;
+						itm.querySelector('.item-qty').textContent = itmQty;
+						itmTot = (itmTot + prc).toFixed(2);
+						itm.querySelector('.item-total').innerHTML = "<span>¥</span>" + itmTot; //+ "</span>"; 
+						updateTotal(prc);
+					}
+				}
+			}
+			item.setAttribute('data-qty', ++qty);
+		}
+
+		function removeItem(e) {
+			var item = this.parentElement.parentElement;
+			var cart = item.parentElement;
+			var price = (parseFloat((item.lastChild.textContent).substr(1)) * -1);
+
+			cart.removeChild(item);
+			updateTotal(price);
+		}
+
+		function createItem(item) {
+			var newItem = document.createElement('p');
+			var newDesc = document.createElement('span');
+			var newBtn = document.createElement('span');
+			var newQty = document.createElement('span');
+			var newPrice = document.createElement('span')
+
+			var desc = item.getAttribute('data-desc');
+			var price = item.getAttribute('data-price');
+
+			newQty.innerHTML = "<span class='col mid item-qty' contenteditable='true'>1</span>";
+
+			// newQty.addEventListener('keyup', updateQty);
+
+			newPrice.innerHTML = "<span class='col right item-total'><span>¥</span>" + price + "</span>";
+
+			newDesc.classList = "col left item-desc";
+			newDesc.textContent = desc;
+			newBtn.classList = "item-rem";
+			newBtn.innerHTML = "<i class='fa fa-trash-o'></i>";
+			newBtn.addEventListener('click', removeItem);
+			newDesc.appendChild(newBtn);
+			
+			newItem.appendChild(newDesc);
+			newItem.appendChild(newQty);
+			newItem.appendChild(newPrice);
+
+			updateTotal(price);
+
+			return newItem;
+		}
+
+		function updateTotal(price) {
+			var total = parseFloat(document.getElementsByClassName('cart-total')[0].lastChild.innerHTML);
+			total += parseFloat(price);
+			document.getElementsByClassName('cart-total')[0].lastChild.innerHTML = total.toFixed(2);
+		}
+
+		function updateQty() {} // TODO
+
+		var addBtns = Array.prototype.slice.call(document.getElementsByClassName('add-btn'));
+		addBtns.forEach(function(btn){
+			btn.addEventListener('click', addItem);
+		});
+
+	</script>
+</body>
+</html>
